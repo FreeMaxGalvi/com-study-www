@@ -10,6 +10,7 @@ public class User {
     private int id;
     private String login;
     private String password;
+    private boolean active;
 
     @Id
     @Column(name = "id")
@@ -39,6 +40,16 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    @Basic
+    @Column(name = "active")
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     @Override
